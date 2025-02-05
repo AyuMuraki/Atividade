@@ -1,29 +1,44 @@
-Primeira tarefa: O objetivo foi realizar uma busca em um site de notícias, escolher uma notícia e, em seguida, capturar o primeiro título da notícia principal e salvá-lo em uma tabela em um banco de dados.
+Primeira Tarefa: Captura de Título de Notícia e Armazenamento em Banco de Dados
+Objetivo: Realizar uma busca em um site de notícias, escolher uma notícia e, em seguida, capturar o primeiro título da notícia principal e salvá-lo em uma tabela em um banco de dados MySQL.
 
-1. Passo a passo para executar o script e criação de um banco de dados:
-2. Banco de dados MySQL: Utilizamos o MySQL para armazenar os dados.
-Criação do banco de dados: O banco de dados foi criado com o seguinte comando
+Passo a Passo para Executar o Script e Criação do Banco de Dados
+Banco de Dados MySQL
+Utilizamos o MySQL para armazenar os dados.
+
+Criação do Banco de Dados
+O banco de dados foi criado com o seguinte comando:
 CREATE DATABASE TAREFAS;
-3.Criação da tabela: Em seguida, foi criada uma tabela para armazenar os títulos das notícias
 
-CREATE TABLE tbl_noticias (
-   id_tbl_noticias INT AUTO_INCREMENT PRIMARY KEY,
-   vl_noticias VARCHAR(1000) NOT NULL
-);
+Criação da Tabela
+Em seguida, foi criada uma tabela para armazenar os títulos das notícias:
+CREATE TABLE tbl_noticias ( id_tbl_noticias INT AUTO_INCREMENT PRIMARY KEY, vl_noticias VARCHAR(1000) NOT NULL );
 
+Instalação do Playwright
+Para utilizar os recursos de automação web, foi necessário instalar a biblioteca Playwright.
 
-4.  Instalação do Playwright: Para utilizar os recursos de automação web, foi necessário instalar a biblioteca Playwright.
-5.  Desenvolvimento do script em Python: O script foi desenvolvido para se conectar ao banco de dados utilizando o mysql.connector e ao Playwright utilizando from playwright.sync_api import sync_playwright.
-6.  Uso do Playwright: O Playwright foi utilizado para capturar o primeiro título da notícia escolhida.
-7.  Acesso à URL: O script acessa a URL do site de notícias para extrair o título.
-8.  Extração do título: O título da notícia foi extraído da página web.
-9.  Exibição do título: O título da notícia capturado foi impresso no terminal.
-10. Inserção no banco de dados: O comando SQL a seguir foi executado para salvar o título da notícia na tabela tbl_noticias:
-cursor_bd.execute('INSERT INTO tbl_noticias (vl_noticias) VALUES (%s)', (noticia_titulo,))
+Desenvolvimento do Script em Python
+O script foi desenvolvido para se conectar ao banco de dados utilizando o mysql.connector e ao Playwright.
 
+Uso do Playwright
+O Playwright foi utilizado para capturar o primeiro título da notícia escolhida. O processo consiste em abrir o navegador, acessar o site e extrair o título da primeira notícia.
 
-11. Confirmação das alterações: As alterações foram salvas no banco de dados com o comando adequado.
-12. Conclusão: Com isso, o script está pronto para ser utilizado.
+Acesso à URL
+O script acessa a URL do site de notícias para extrair o título da notícia.
 
-  Essa tarefa permite entender como funciona o Playwright e, de forma assíncrona, como integrar o processo de captura de dados com um banco de dados,
-  salvando os dados em uma tabela.
+Extração do Título
+O título da notícia foi extraído da página web utilizando o Playwright.
+
+Exibição do Título
+O título da notícia capturado foi impresso no terminal para verificar o resultado.
+
+Inserção no Banco de Dados
+O comando SQL foi executado para salvar o título da notícia na tabela tbl_noticias.
+
+Confirmação das Alterações
+As alterações foram salvas no banco de dados utilizando o comando adequado para garantir que os dados fossem persistidos.
+
+Conclusão
+Com isso, o script está pronto para ser utilizado, realizando a captura do título da notícia e o armazenamento no banco de dados.
+
+Resumo
+Essa tarefa permite entender como funciona o Playwright e, de forma assíncrona, como integrar o processo de captura de dados com um banco de dados, salvando as informações em uma tabela no MySQL.
