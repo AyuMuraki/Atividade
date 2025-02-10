@@ -1,44 +1,75 @@
-Primeira Tarefa: Captura de Título de Notícia e Armazenamento em Banco de Dados
-Objetivo: Realizar uma busca em um site de notícias, escolher uma notícia e, em seguida, capturar o primeiro título da notícia principal e salvá-lo em uma tabela em um banco de dados MySQL.
+## **📰  Captura de Título de Notícia e Armazenamento em Banco de Dados 🗃️**
 
-Passo a Passo para Executar o Script e Criação do Banco de Dados
-Banco de Dados MySQL
-Utilizamos o MySQL para armazenar os dados.
+##  **🎯 Objetivo**
 
-Criação do Banco de Dados
+O objetivo desta tarefa é realizar uma busca em um site de notícias, escolher uma notícia e capturar o título da notícia principal. Em seguida, o título é salvo em uma tabela no banco de dados MySQL. Tudo isso de forma automatizada e eficiente! 🚀
+
+
+
+**🛠️ Passo a Passo para Executar o Script e Criação do Banco de Dados**
+
+🗄️ Banco de Dados MySQL
+Utilizamos o MySQL para armazenar os dados de forma organizada e segura.
+
+**Criação do Banco de Dados**
+
 O banco de dados foi criado com o seguinte comando:
-CREATE DATABASE TAREFAS;
+
+🔹 **CREATE DATABASE TAREFAS;**
 
 Criação da Tabela
-Em seguida, foi criada uma tabela para armazenar os títulos das notícias:
-CREATE TABLE tbl_noticias ( id_tbl_noticias INT AUTO_INCREMENT PRIMARY KEY, vl_noticias VARCHAR(1000) NOT NULL );
+Em seguida, criamos uma tabela para armazenar os títulos das notícias:
 
-Instalação do Playwright
-Para utilizar os recursos de automação web, foi necessário instalar a biblioteca Playwright.
 
-Desenvolvimento do Script em Python
-O script foi desenvolvido para se conectar ao banco de dados utilizando o mysql.connector e ao Playwright.
+```bash
 
-Uso do Playwright
-O Playwright foi utilizado para capturar o primeiro título da notícia escolhida. O processo consiste em abrir o navegador, acessar o site e extrair o título da primeira notícia.
+CREATE TABLE tbl_noticias (
+    id_tbl_noticias INT AUTO_INCREMENT PRIMARY KEY,
+    vl_noticias VARCHAR(1000) NOT NULL
+);
+
+```
+
+**🎭 Instalação do Playwright**
+
+Para automatizar a captura dos dados, utilizamos a biblioteca Playwright, que permite controlar um navegador de forma programática. Para instalá-la, basta rodar:
+
+```bash
+pip install playwright
+playwright install
+
+```
+## **🐍 Desenvolvimento do Script em Python**
+
+O script foi desenvolvido para:
+
+Conectar ao banco de dados utilizando o **mysql.connector.**
+
+Utilizar o **Playwright** para capturar o título da notícia.
+
+**🧠 Uso do Playwright**
+
+O Playwright abre o navegador, acessa o site de notícias e extrai o título da primeira notícia. Tudo isso de forma rápida e eficiente! 🕸️
 
 Acesso à URL
-O script acessa a URL do site de notícias para extrair o título da notícia.
+O script acessa a URL do site de notícias para encontrar o título da notícia principal.
 
 Extração do Título
-O título da notícia foi extraído da página web utilizando o Playwright.
+O título é extraído da página web utilizando seletores do Playwright. 🎯
 
 Exibição do Título
-O título da notícia capturado foi impresso no terminal para verificar o resultado.
+O título capturado é exibido no terminal para verificação. 🖥️
 
 Inserção no Banco de Dados
-O comando SQL foi executado para salvar o título da notícia na tabela tbl_noticias.
+O título é salvo na tabela tbl_noticias utilizando um comando SQL. 💾
 
 Confirmação das Alterações
-As alterações foram salvas no banco de dados utilizando o comando adequado para garantir que os dados fossem persistidos.
+As alterações são confirmadas no banco de dados para garantir que os dados sejam persistidos. ✅
 
-Conclusão
-Com isso, o script está pronto para ser utilizado, realizando a captura do título da notícia e o armazenamento no banco de dados.
+Com esse script, você pode automatizar a captura de títulos de notícias e armazená-los em um banco de dados MySQL de forma mais assertiva, sendo uma excelente maneira de integrar automação web junto com armazenamento de dados🚀
 
-Resumo
-Essa tarefa permite entender como funciona o Playwright e, de forma assíncrona, como integrar o processo de captura de dados com um banco de dados, salvando as informações em uma tabela no MySQL.
+
+🎉 Espero que tenham gostado dessa tarefa! 🎉
+Se surgirem dúvidas, sugestões ou precisarem de ajuda, estou à disposição para ajudar! 😊✨
+
+
